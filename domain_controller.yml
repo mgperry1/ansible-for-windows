@@ -61,6 +61,6 @@
       name: test_admin
       password: "AutomationDoesW0rk!"
       state: present
-      path: cn=Users,dc=CONTOSO,dc=com
+      path: cn=Users,dc=GSKCLOUD,dc=com
       groups:
         - Domain Admins
