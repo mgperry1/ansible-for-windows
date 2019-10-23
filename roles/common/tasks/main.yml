@@ -13,7 +13,7 @@
   win_reboot:
     shutdown_timeout: 600
     reboot_timeout: 600
-    post_boot_delay: 120
+    #post_boot_delay: 120
   when: check_powershell5.changed
 #
 # Enable Remote Desktop
