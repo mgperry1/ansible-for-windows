@@ -1,5 +1,5 @@
 ---
-- name: CONTOSO.com Domain Controller configuration
+- name: GSKCLOUD.com Domain Controller configuration
   hosts: domain_controllers
   serial: 1
 
@@ -9,14 +9,14 @@
   tasks:
 
   # ensure the named domain is reachable from the target host; if not, create the domain in a new forest residing on the target host
-  - name: Ensure that CONTOSO.com Domain exists
+  - name: Ensure that GSKCLOUD.com Domain exists
     win_domain:
-      dns_domain_name: CONTOSO.com
+      dns_domain_name: GSKCLOUD.com
       safe_mode_password: AutomationDoesW0rk!
     register: check_domain
 
   # Creating a Domain Controller requires a reboot
-  - name: Reboot to complete CONTOSO.com domain setup
+  - name: Reboot to complete GSKCLOUD.com domain setup
     win_reboot:
       shutdown_timeout: 600
       reboot_timeout: 600
@@ -25,8 +25,8 @@
 
   - name: Ensure the server is a domain controller
     win_domain_controller:
-      dns_domain_name: CONTOSO.com
-      domain_admin_user: test_admin@CONTOSO.com
+      dns_domain_name: GSKCLOUD.com
+      domain_admin_user: test_admin@GSKCLOUD.com
       domain_admin_password: AutomationDoesW0rk!
       safe_mode_password: AutomationDoesW0rk!
       state: domain_controller
@@ -56,7 +56,7 @@
         - "8.8.8.8"
         - "8.8.4.4"
 
-  - name: Ensure that Domain Admin test_admin@CONTOSO.com is present in OU cn=Users,dc=CONTOSO,dc=com
+  - name: Ensure that Domain Admin test_admin@GSKCLOUD.com is present in OU cn=Users,dc=CONTOSO,dc=com
     win_domain_user:
       name: test_admin
       password: "AutomationDoesW0rk!"

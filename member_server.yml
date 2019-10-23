@@ -1,5 +1,5 @@
 ---
-- name: CONTOSO.com member server configuration
+- name: GSKCLOUD.com member server configuration
   hosts: member_servers
 
   roles:
@@ -31,11 +31,11 @@
       reboot_timeout: 600
       post_boot_delay: 120
 
-  - name: Verify server is a member of CONTOSO.com
+  - name: Verify server is a member of GSKCLOUD.com
     win_domain_membership:
       hostname: "{{ inventory_hostname }}"
-      dns_domain_name: CONTOSO.com
-      domain_admin_user: test_admin@CONTOSO.com
+      dns_domain_name: GSKCLOUD.com
+      domain_admin_user: test_admin@GSKCLOUD.com
       domain_admin_password: "AutomationDoesW0rk!"
       state: domain
       domain_ou_path: CN=Computers,DC=CONTOSO,DC=com
