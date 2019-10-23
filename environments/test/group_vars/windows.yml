@@ -1,7 +1,7 @@
 # Ansible user
 ansible_user: vagrant
 # best practice would be to encrypt this using Ansible vault
-ansible_password: vagrant
+ansible_password: CL00dwin2016
 # Setup some base values for connectivity to windows hosts
 # Using basic authentication because we're using a local account.
 ansible_winrm_transport: basic
