@@ -1,0 +1,7 @@
+---
+- name: GSKCLOUD.com MSSQL server configuration
+  hosts: member_servers
+
+  roles:
+     - { role: mssql }
+

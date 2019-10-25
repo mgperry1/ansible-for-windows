@@ -4,7 +4,7 @@ domain_controllers
 member_servers
 
 [domain_controllers]
-dc01 ansible_host=192.168.100.10
+GSK-AWX-WIN2016-DC ansible_host=150.136.230.203
 
 [member_servers]
-server01 ansible_host=192.168.100.11
+GSK-WINDOWS-SQL ansible_host=129.213.152.20
