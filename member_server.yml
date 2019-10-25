@@ -10,7 +10,8 @@
     win_dns_client:
       adapter_names: "*"
       ipv4_addresses:
-      - 192.168.100.10
+      - 10.0.0.17
+      - 150.136.230.203
 
   - name: Debug
     debug: var=inventory_hostname
@@ -38,7 +39,7 @@
       domain_admin_user: test_admin@GSKCLOUD.com
       domain_admin_password: "AutomationDoesW0rk!"
       state: domain
-      domain_ou_path: CN=Computers,DC=CONTOSO,DC=com
+      domain_ou_path: CN=Computers,DC=GSKCLOUD,DC=com
     register: domain_state
 
   - name: Reboot to complete joining domain
