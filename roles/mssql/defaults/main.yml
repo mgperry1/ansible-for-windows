@@ -33,7 +33,7 @@ mssql_suppress_reboot: False
 ### Service Accounts ###
 
 mssql_base_ldap_path: "cn=Users,dc=GSKCLOUD,dc=com"
-domain_controller: GSK-AWX-WIN2016-DC
+domain_controller: gsk-awx-win2016-dc
 
 # SQL Service Account
 # regex statements used in some steps expect the format of GSKCLOUD\
